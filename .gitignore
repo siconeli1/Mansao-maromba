@@ -30,3 +30,5 @@ Mansao-maromba/.env
 .DS_Store?
 ehthumbs.db
 Thumbs.db
+
+.env
