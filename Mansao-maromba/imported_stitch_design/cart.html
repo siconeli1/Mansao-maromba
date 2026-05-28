@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Anybody:wght@700;800;900&amp;family=Space+Grotesk:wght@700&amp;family=Hanken+Grotesk:wght@400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        body {
+            background-color: #050505;
+            color: #e5e2e1;
+            -webkit-font-smoothing: antialiased;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #121212;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #FFFF00;
+        }
+        .industrial-line {
+            background: repeating-linear-gradient(
+                45deg,
+                #FFFF00,
+                #FFFF00 10px,
+                #050505 10px,
+                #050505 20px
+            );
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-surface-variant": "#cac8aa",
+                      "surface-tint": "#cdcd00",
+                      "primary": "#ffffff",
+                      "on-tertiary-fixed": "#1c1b1b",
+                      "on-tertiary": "#313030",
+                      "on-primary": "#323200",
+                      "neon-green": "#39FF14",
+                      "background": "#131313",
+                      "on-secondary": "#053900",
+                      "tertiary-container": "#e5e2e1",
+                      "surface-container-low": "#1c1b1b",
+                      "on-tertiary-container": "#656464",
+                      "on-error-container": "#ffdad6",
+                      "on-secondary-fixed": "#022100",
+                      "on-primary-container": "#686800",
+                      "secondary-fixed": "#79ff5b",
+                      "on-tertiary-fixed-variant": "#474646",
+                      "on-background": "#e5e2e1",
+                      "surface-container-highest": "#353535",
+                      "on-secondary-container": "#0f6d00",
+                      "surface-variant": "#353535",
+                      "error-container": "#93000a",
+                      "surface-container-high": "#2a2a2a",
+                      "inverse-primary": "#626200",
+                      "dark-grey": "#121212",
+                      "on-error": "#690005",
+                      "outline-variant": "#484831",
+                      "neon-yellow": "#FFFF00",
+                      "off-white": "#F5F5F5",
+                      "inverse-surface": "#e5e2e1",
+                      "surface-container": "#20201f",
+                      "on-surface": "#e5e2e1",
+                      "surface-dim": "#131313",
+                      "primary-fixed": "#eaea00",
+                      "primary-container": "#eaea00",
+                      "error": "#ffb4ab",
+                      "on-secondary-fixed-variant": "#095300",
+                      "on-primary-fixed": "#1d1d00",
+                      "tertiary-fixed-dim": "#c9c6c5",
+                      "inverse-on-surface": "#313030",
+                      "tertiary": "#ffffff",
+                      "surface-bright": "#393939",
+                      "surface": "#131313",
+                      "surface-container-lowest": "#0e0e0e",
+                      "secondary-fixed-dim": "#2ae500",
+                      "on-primary-fixed-variant": "#494900",
+                      "secondary": "#d7ffc5",
+                      "tertiary-fixed": "#e5e2e1",
+                      "secondary-container": "#2ff801",
+                      "outline": "#939277",
+                      "jet-black": "#050505",
+                      "primary-fixed-dim": "#cdcd00"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "unit": "4px",
+                      "section-gap": "128px",
+                      "margin-mobile": "20px",
+                      "gutter": "24px",
+                      "margin-desktop": "64px"
+              },
+              "fontFamily": {
+                      "display-lg-mobile": ["Anybody"],
+                      "label-caps": ["Space Grotesk"],
+                      "headline-md": ["Anybody"],
+                      "display-lg": ["Anybody"],
+                      "headline-xl": ["Anybody"],
+                      "body-md": ["Hanken Grotesk"],
+                      "price-display": ["Anybody"],
+                      "body-lg": ["Hanken Grotesk"]
+              },
+              "fontSize": {
+                      "display-lg-mobile": ["48px", {"lineHeight": "95%", "fontWeight": "900"}],
+                      "label-caps": ["12px", {"lineHeight": "100%", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                      "headline-md": ["24px", {"lineHeight": "120%", "fontWeight": "700"}],
+                      "display-lg": ["84px", {"lineHeight": "90%", "letterSpacing": "-0.04em", "fontWeight": "900"}],
+                      "headline-xl": ["42px", {"lineHeight": "110%", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                      "body-md": ["16px", {"lineHeight": "150%", "fontWeight": "400"}],
+                      "price-display": ["32px", {"lineHeight": "100%", "fontWeight": "900"}],
+                      "body-lg": ["18px", {"lineHeight": "160%", "fontWeight": "400"}]
+              }
+            },
+          },
+        }
+    </script>
+</head>
+<body class="bg-jet-black">
+<!-- Top Navigation Bar -->
+<nav class="bg-surface/10 backdrop-blur-xl dark:bg-jet-black/20 text-primary dark:text-neon-yellow docked full-width top-0 sticky z-50 border-b border-white/5 flex justify-between items-center w-full px-margin-desktop py-4">
+<a href="index.html" class="text-headline-md font-headline-md font-black text-primary italic dark:text-neon-yellow hover:opacity-80 transition-opacity">MANSÃO MAROMBA</a>
+<div class="hidden md:flex gap-8 items-center">
+<a class="text-label-caps font-label-caps uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors" href="shop.html">SHOP</a>
+<a class="text-label-caps font-label-caps uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors" href="index.html">FLAVORS</a>
+<a class="text-label-caps font-label-caps uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors" href="about.html">DAMAGE REDUCTION</a>
+<a class="text-label-caps font-label-caps uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors" href="index.html#community">HYPE</a>
+</div>
+<div class="flex items-center gap-6">
+<a href="cart.html" class="hover:bg-white/5 transition-all duration-300 p-2 rounded scale-95 active:scale-90 transition-transform flex items-center justify-center"><span class="material-symbols-outlined text-primary dark:text-neon-yellow">shopping_cart</span></a>
+<button class="hover:bg-white/5 transition-all duration-300 p-2 rounded scale-95 active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-primary dark:text-neon-yellow">person</span>
+</button>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="min-h-screen px-margin-mobile md:px-margin-desktop pt-12 pb-section-gap">
+<div class="max-w-[1400px] mx-auto">
+<!-- Page Header -->
+<header class="mb-16">
+<h1 class="font-display-lg text-display-lg uppercase mb-4 tracking-tighter">
+                    SEU <span class="text-neon-yellow italic">CARRINHO</span>
+</h1>
+<div class="flex items-center gap-4 text-on-surface-variant">
+<span class="font-label-caps text-label-caps uppercase">02 ITENS SELECIONADOS</span>
+<div class="h-[1px] flex-grow bg-surface-container-high"></div>
+</div>
+</header>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-start">
+<!-- Items List Section (8 Columns) -->
+<section class="md:col-span-8 space-y-6">
+<!-- Item 1: Goro Original -->
+<div class="group flex flex-col sm:flex-row bg-surface-container-lowest border border-surface-container-high overflow-hidden hover:border-neon-yellow/30 transition-colors duration-300">
+<div class="sm:w-1/3 aspect-[3/4] overflow-hidden bg-dark-grey relative">
+<img alt="Goro Original Neon Yellow" class="w-full h-full object-cover grayscale-[0.2] group-hover:grayscale-0 transition-all duration-500 scale-105 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida/ADBb0uholcRfBfUdaCubHdNBL4F27H6UXhMGJC-VCYNkywDfgbE-jjrHmV-KhumPTal_IfcZYg_agNrdjbKS79JiwqicBbmn5GjEdIiXK3Wdj8Qvk1NQOkw9CS_BsPK6dcJdA1Rl2P4Oe-OXHQNe6xqmDuMYLuUuU0Iqc0DhLH39j69X-3ixQgVjRqeEZS5nSrTeW7NDz4KinNBhDSyiiyX4q-ilEfpqGBCqrKd-sngNeiCla-J-epAtNiEDY2EQ"/>
+<div class="absolute top-4 left-4">
+<span class="bg-neon-yellow text-jet-black font-label-caps text-label-caps px-2 py-1 uppercase italic">HYPED</span>
+</div>
+</div>
+<div class="flex-grow p-8 flex flex-col justify-between">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-headline-md text-headline-md uppercase text-primary mb-1 italic">GORO ORIGINAL</h3>
+<p class="font-label-caps text-label-caps text-on-surface-variant uppercase">SABOR NEON YELLOW / 1L</p>
+</div>
+<button class="text-on-surface-variant hover:text-error transition-colors">
+<span class="material-symbols-outlined">delete</span>
+</button>
+</div>
+<div class="mt-8 flex flex-wrap items-end justify-between gap-6">
+<div class="flex items-center border border-surface-container-high bg-jet-black">
+<button class="p-4 hover:bg-surface-container-low transition-colors text-neon-yellow active:scale-90">-</button>
+<span class="px-6 font-price-display text-price-display text-primary">1</span>
+<button class="p-4 hover:bg-surface-container-low transition-colors text-neon-yellow active:scale-90">+</button>
+</div>
+<div class="text-right">
+<p class="font-price-display text-price-display text-primary">R$ 89,90</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Item 2: Goro Tropical -->
+<div class="group flex flex-col sm:flex-row bg-surface-container-lowest border border-surface-container-high overflow-hidden hover:border-neon-green/30 transition-colors duration-300">
+<div class="sm:w-1/3 aspect-[3/4] overflow-hidden bg-dark-grey relative">
+<img alt="Goro Tropical Neon Green" class="w-full h-full object-cover grayscale-[0.2] group-hover:grayscale-0 transition-all duration-500 scale-105 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida/ADBb0uhL9L0FZDInO9GdUz4gzypWleSihZrczoM15WO1UxB2wlLJFZV3KKdJZ_RLbEyXekL2euW3VNb0WLc50pC-_2mvggtGI03q7TAt95Zt7enKn8femntFMXSlq0o1FAoV7-NQen8XaHRjR5HvfUjrC4A-ywVfM4eOafhmYMjT461jBEklBC7wHmv8kvmOZBX2h1rkdxVFFEYGX2LX5QoEI-YCTzFl-eSI6-vGHDpiUdRqxhyY5xMFzKedtZDs"/>
+<div class="absolute top-4 left-4">
+<span class="bg-neon-green text-jet-black font-label-caps text-label-caps px-2 py-1 uppercase italic">FROZEN</span>
+</div>
+</div>
+<div class="flex-grow p-8 flex flex-col justify-between">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-headline-md text-headline-md uppercase text-primary mb-1 italic">GORO TROPICAL</h3>
+<p class="font-label-caps text-label-caps text-on-surface-variant uppercase">SABOR NEON GREEN / 1L</p>
+</div>
+<button class="text-on-surface-variant hover:text-error transition-colors">
+<span class="material-symbols-outlined">delete</span>
+</button>
+</div>
+<div class="mt-8 flex flex-wrap items-end justify-between gap-6">
+<div class="flex items-center border border-surface-container-high bg-jet-black">
+<button class="p-4 hover:bg-surface-container-low transition-colors text-neon-green active:scale-90">-</button>
+<span class="px-6 font-price-display text-price-display text-primary">2</span>
+<button class="p-4 hover:bg-surface-container-low transition-colors text-neon-green active:scale-90">+</button>
+</div>
+<div class="text-right">
+<p class="font-price-display text-price-display text-primary">R$ 179,80</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Empty space buffer for editorial rhythm -->
+<div class="pt-8 flex items-center gap-4 text-surface-container-high">
+<span class="material-symbols-outlined text-[48px]">bolt</span>
+<p class="font-label-caps text-label-caps uppercase italic tracking-tighter">ENERGIA BRUTA. SEM DESCULPAS.</p>
+</div>
+</section>
+<!-- Summary Section (4 Columns) -->
+<aside class="md:col-span-4 sticky top-24">
+<div class="bg-surface-container-low border border-surface-container-high p-8 flex flex-col gap-8">
+<div>
+<h2 class="font-headline-md text-headline-md uppercase text-primary mb-6 italic tracking-tight">RESUMO</h2>
+<div class="space-y-4 font-body-md text-body-md">
+<div class="flex justify-between text-on-surface-variant">
+<span>SUBTOTAL</span>
+<span class="text-primary font-price-display text-[20px]">R$ 269,70</span>
+</div>
+<div class="flex flex-col gap-2 pt-4 border-t border-surface-container-high">
+<label class="font-label-caps text-[10px] text-on-surface-variant uppercase">CALCULAR FRETE</label>
+<div class="flex gap-2">
+<input class="flex-grow bg-jet-black border border-surface-container-high text-primary px-4 py-2 font-label-caps focus:border-neon-yellow focus:ring-0 outline-none transition-colors" placeholder="CEP: 00000-000" type="text"/>
+<button class="px-4 border border-neon-yellow text-neon-yellow font-label-caps uppercase text-[10px] hover:bg-neon-yellow hover:text-jet-black transition-all">OK</button>
+</div>
+<div class="flex justify-between text-neon-green mt-2">
+<span class="text-[12px] uppercase">FRETE GRÁTIS</span>
+<span class="font-label-caps">R$ 0,00</span>
+</div>
+</div>
+</div>
+</div>
+<div class="pt-6 border-t border-surface-container-high">
+<div class="flex justify-between items-end mb-8">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">TOTAL</span>
+<span class="font-price-display text-price-display text-neon-yellow">R$ 269,70</span>
+</div>
+<button class="w-full bg-neon-yellow text-jet-black font-headline-md text-[18px] uppercase py-6 italic hover:bg-white transition-all transform hover:-translate-y-1 active:scale-95 duration-200">
+                                PROSSEGUIR PARA O PAGAMENTO
+                            </button>
+<p class="text-center mt-4 font-label-caps text-[10px] text-on-surface-variant uppercase tracking-widest opacity-50">
+                                AMBIENTE 100% SEGURO
+                            </p>
+</div>
+</div>
+<!-- Promo / Upsell Asset -->
+<div class="mt-6 bg-neon-green/10 border border-neon-green/20 p-6 flex items-center gap-4">
+<span class="material-symbols-outlined text-neon-green" style="font-variation-settings: 'FILL' 1;">shield_with_heart</span>
+<p class="font-label-caps text-label-caps text-neon-green leading-tight uppercase">
+                            ADICIONE REDUTOR DE DANOS E GANHE 15% OFF NO COMBO
+                        </p>
+</div>
+</aside>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-jet-black dark:bg-jet-black border-t border-surface-container-high full-width mt-section-gap grid grid-cols-1 md:grid-cols-12 gap-gutter px-margin-desktop py-16">
+<div class="md:col-span-12 mb-12">
+<h2 class="text-display-lg font-display-lg text-surface-container-highest opacity-20 uppercase pointer-events-none">
+                MANSÃO MAROMBA
+            </h2>
+</div>
+<div class="md:col-span-4 flex flex-col gap-6">
+<p class="text-body-md font-body-md text-on-surface-variant max-w-sm">
+                A revolução energética para quem não aceita o mediano. Luxury-industrial beverage engineered for the elite.
+            </p>
+<p class="text-label-caps font-label-caps text-neon-green uppercase">© 2024 MANSÃO MAROMBA. NO REGRETS.</p>
+</div>
+<div class="md:col-span-2 flex flex-col gap-4">
+<h4 class="text-label-caps font-label-caps text-primary uppercase mb-2">PAGES</h4>
+<a class="text-body-md font-body-md text-on-surface-variant hover:text-neon-green hover:translate-x-1 transition-transform duration-200" href="#">Shop</a>
+<a class="text-body-md font-body-md text-on-surface-variant hover:text-neon-green hover:translate-x-1 transition-transform duration-200" href="#">Flavors</a>
+<a class="text-body-md font-body-md text-on-surface-variant hover:text-neon-green hover:translate-x-1 transition-transform duration-200" href="#">Damage Reduction</a>
+</div>
+<div class="md:col-span-2 flex flex-col gap-4">
+<h4 class="text-label-caps font-label-caps text-primary uppercase mb-2">LEGAL</h4>
+<a class="text-body-md font-body-md text-on-surface-variant hover:text-neon-green hover:translate-x-1 transition-transform duration-200" href="#">Privacy Policy</a>
+<a class="text-body-md font-body-md text-on-surface-variant hover:text-neon-green hover:translate-x-1 transition-transform duration-200" href="#">Terms of Service</a>
+<a class="text-body-md font-body-md text-on-surface-variant hover:text-neon-green hover:translate-x-1 transition-transform duration-200" href="#">Wholesale</a>
+</div>
+<div class="md:col-span-4 flex flex-col gap-4 items-end">
+<div class="flex gap-4 mb-4">
+<a class="w-12 h-12 border border-surface-container-high flex items-center justify-center hover:border-neon-yellow transition-colors group" href="#">
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-neon-yellow transition-colors">groups</span>
+</a>
+<a class="w-12 h-12 border border-surface-container-high flex items-center justify-center hover:border-neon-yellow transition-colors group" href="#">
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-neon-yellow transition-colors">bolt</span>
+</a>
+</div>
+<a class="text-headline-md font-headline-md text-primary hover:text-neon-yellow transition-colors" href="mailto:contact@mansaomaromba.com">Contact</a>
+</div>
+</footer>
+<!-- Bottom Nav Bar (Mobile Only) -->
+<div class="bg-jet-black/80 backdrop-blur-2xl dark:bg-jet-black/90 shadow-2xl fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 py-3 border-t border-outline-variant md:hidden">
+<a class="flex flex-col items-center justify-center text-on-surface-variant p-2 active:bg-surface-variant" href="shop.html"><span class="material-symbols-outlined">bolt</span><span class="text-label-caps font-label-caps text-[10px] uppercase">Shop</span></a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant p-2 active:bg-surface-variant" href="about.html"><span class="material-symbols-outlined">shield_with_heart</span><span class="text-label-caps font-label-caps text-[10px] uppercase">Damage</span></a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant p-2 active:bg-surface-variant" href="index.html#community"><span class="material-symbols-outlined">groups</span><span class="text-label-caps font-label-caps text-[10px] uppercase">Community</span></a>
+<a class="flex flex-col items-center justify-center text-neon-yellow bg-surface-container-highest/50 rounded-xl p-2 active:bg-surface-variant" href="cart.html"><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">shopping_bag</span><span class="text-label-caps font-label-caps text-[10px] uppercase">Cart</span></a>
+</div>
+<script>
+        // Micro-interactions for quantity selectors
+        document.querySelectorAll('.active\\:scale-90').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const isPlus = this.innerText === '+';
+                const counter = this.parentElement.querySelector('span');
+                let val = parseInt(counter.innerText);
+                if (isPlus) val++;
+                else if (val > 1) val--;
+                counter.innerText = val;
+                
+                // Add a small pulse effect
+                counter.style.transform = 'scale(1.2)';
+                setTimeout(() => counter.style.transform = 'scale(1)', 100);
+            });
+        });
+
+        // Atmospheric parallax effect on scroll for text backgrounds
+        window.addEventListener('scroll', () => {
+            const footerTitle = document.querySelector('footer h2');
+            const scrollPos = window.scrollY;
+            if (footerTitle) {
+                footerTitle.style.transform = `translateX(${scrollPos * 0.1 - 200}px)`;
+            }
+        });
+    </script>
+</body></html>

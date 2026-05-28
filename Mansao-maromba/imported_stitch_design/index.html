@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>MANSÃO MAROMBA | O Sabor da Festa, Sem o Risco</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Anybody:wght@700;800;900&amp;family=Hanken+Grotesk:wght@400;700&amp;family=Space+Grotesk:wght@700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-container": "#eaea00",
+                        "dark-grey": "#121212",
+                        "error-container": "#93000a",
+                        "background": "#131313",
+                        "inverse-surface": "#e5e2e1",
+                        "on-surface-variant": "#cac8aa",
+                        "on-tertiary-fixed": "#1c1b1b",
+                        "inverse-primary": "#626200",
+                        "primary": "#ffffff",
+                        "surface": "#131313",
+                        "on-background": "#e5e2e1",
+                        "surface-tint": "#cdcd00",
+                        "on-primary-fixed": "#1d1d00",
+                        "tertiary-container": "#e5e2e1",
+                        "on-secondary-container": "#0f6d00",
+                        "on-error-container": "#ffdad6",
+                        "surface-variant": "#353535",
+                        "tertiary-fixed": "#e5e2e1",
+                        "primary-fixed": "#eaea00",
+                        "neon-green": "#39FF14",
+                        "surface-container-highest": "#353535",
+                        "jet-black": "#050505",
+                        "secondary-container": "#2ff801",
+                        "surface-container-low": "#1c1b1b",
+                        "outline": "#939277",
+                        "error": "#ffb4ab",
+                        "on-error": "#690005",
+                        "neon-yellow": "#FFFF00",
+                        "surface-container-high": "#2a2a2a",
+                        "surface-dim": "#131313",
+                        "surface-container-lowest": "#0e0e0e",
+                        "on-tertiary-fixed-variant": "#474646",
+                        "secondary": "#d7ffc5",
+                        "surface-container": "#20201f",
+                        "surface-bright": "#393939",
+                        "off-white": "#F5F5F5",
+                        "primary-fixed-dim": "#cdcd00",
+                        "on-tertiary": "#313030",
+                        "secondary-fixed-dim": "#2ae500",
+                        "secondary-fixed": "#79ff5b",
+                        "on-secondary-fixed-variant": "#095300",
+                        "outline-variant": "#484831",
+                        "on-primary": "#323200",
+                        "on-secondary-fixed": "#022100",
+                        "on-secondary": "#053900",
+                        "inverse-on-surface": "#313030",
+                        "on-primary-container": "#686800",
+                        "on-surface": "#e5e2e1",
+                        "tertiary-fixed-dim": "#c9c6c5",
+                        "on-primary-fixed-variant": "#494900",
+                        "tertiary": "#ffffff",
+                        "on-tertiary-container": "#656464"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-mobile": "20px",
+                        "section-gap": "128px",
+                        "margin-desktop": "64px",
+                        "gutter": "24px",
+                        "unit": "4px"
+                    },
+                    "fontFamily": {
+                        "display-lg-mobile": ["Anybody"],
+                        "body-md": ["Hanken Grotesk"],
+                        "body-lg": ["Hanken Grotesk"],
+                        "headline-md": ["Anybody"],
+                        "display-lg": ["Anybody"],
+                        "headline-xl": ["Anybody"],
+                        "price-display": ["Anybody"],
+                        "label-caps": ["Space Grotesk"]
+                    },
+                    "fontSize": {
+                        "display-lg-mobile": ["48px", {"lineHeight": "95%", "fontWeight": "900"}],
+                        "body-md": ["16px", {"lineHeight": "150%", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "160%", "fontWeight": "400"}],
+                        "headline-md": ["24px", {"lineHeight": "120%", "fontWeight": "700"}],
+                        "display-lg": ["84px", {"lineHeight": "90%", "letterSpacing": "-0.04em", "fontWeight": "900"}],
+                        "headline-xl": ["42px", {"lineHeight": "110%", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                        "price-display": ["32px", {"lineHeight": "100%", "fontWeight": "900"}],
+                        "label-caps": ["12px", {"lineHeight": "100%", "letterSpacing": "0.1em", "fontWeight": "700"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body {
+            background-color: #050505;
+            color: #e5e2e1;
+            overflow-x: hidden;
+            cursor: crosshair;
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .stencil-text {
+            -webkit-text-stroke: 1px rgba(255, 255, 255, 0.2);
+            text-stroke: 1px rgba(255, 255, 255, 0.2);
+        }
+
+        .neon-glow:hover {
+            text-shadow: 0 0 8px #FFFF00, 0 0 12px #FFFF00;
+        }
+
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 24px;
+        }
+
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .bubble {
+            position: absolute;
+            background: rgba(57, 255, 20, 0.3);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #050505;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #2a2a2a;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #FFFF00;
+        }
+    </style>
+</head>
+<body class="font-body-md bg-jet-black selection:bg-neon-yellow selection:text-jet-black">
+<!-- TopNavBar -->
+<nav class="bg-surface/10 backdrop-blur-xl dark:bg-jet-black/20 text-primary dark:text-neon-yellow docked full-width top-0 sticky z-50 border-b border-white/5 flex justify-between items-center w-full px-margin-desktop py-4">
+<a href="index.html" class="text-headline-md font-headline-md font-black text-primary italic dark:text-neon-yellow hover:opacity-80 transition-opacity">MANSÃO MAROMBA</a>
+<div class="hidden md:flex gap-8">
+<a class="text-label-caps font-label-caps uppercase tracking-widest text-neon-yellow border-b-2 border-neon-yellow pb-1" href="shop.html">SHOP</a>
+<a class="text-label-caps font-label-caps uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors" href="index.html">FLAVORS</a>
+<a class="text-label-caps font-label-caps uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors" href="about.html">DAMAGE REDUCTION</a>
+<a class="text-label-caps font-label-caps uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors" href="index.html#community">HYPE</a>
+</div>
+<div class="flex items-center gap-6">
+<a href="cart.html" class="hover:bg-white/5 transition-all duration-300 p-2 rounded-full flex items-center justify-center active:scale-95 transition-transform"><span class="material-symbols-outlined text-primary dark:text-neon-yellow">shopping_cart</span></a>
+<span class="material-symbols-outlined cursor-pointer hover:bg-white/5 transition-all duration-300 p-2 rounded-full" data-icon="person">person</span>
+</div>
+</nav>
+<main>
+<!-- Hero Section -->
+<section class="relative min-h-screen flex flex-col items-center justify-center pt-20 overflow-hidden">
+<div class="absolute inset-0 z-0 flex items-center justify-center opacity-10 select-none">
+<h2 class="text-[30vw] font-black leading-none font-display-lg italic stencil-text">GORO</h2>
+</div>
+<div class="container mx-auto px-margin-desktop relative z-10 flex flex-col md:flex-row items-center justify-between">
+<div class="md:w-1/2 mb-12 md:mb-0">
+<h1 class="font-display-lg text-display-lg mb-6 leading-tight">
+                        SABOR <br/>
+<span class="text-neon-yellow italic">ENERGÉTICO</span> <br/>
+                        ORIGINAL
+                    </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-md mb-10">
+                        O hype das festas agora sem os riscos cardíacos. Redução de danos pura, com o sabor que você já ama.
+                    </p>
+<a href="shop.html"><button class="bg-neon-yellow text-jet-black px-12 py-4 font-black text-xl uppercase tracking-tighter hover:bg-white transition-all transform active:scale-95">COMPRAR AGORA
+                    </button>
+</div>
+<div class="md:w-1/2 relative flex justify-center">
+<div class="absolute inset-0 bg-neon-yellow/20 blur-[120px] rounded-full"></div>
+<img alt="Garrafa Mansão Maromba Goro" class="h-[70vh] object-contain animate-float relative z-10 drop-shadow-[0_35px_35px_rgba(255,255,0,0.25)]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCE6x6F7Ge4XzQtE4FaMoQG4eyvY9UBf3_LgoE_98aKg3T0fdPze-CUofsuW6N0_9-rnoim2wPHlchikRc0vyPAEToTxAuAwDLscGcClJFjMyisZpnkIvTFam0KYsmf8RHXOf97xq0tYnVYXFLorvJE-FCwrX9DaK1rKcTiGYVTdIY5aOql0_PC2NRiJs30lG72GYhXKQOPqcRJj3UHNKFQm6nT-Iq6YsyBwgBg5xtjbUAcMHMbiLsGvDlb0XgKjgGpSpDVy4kRUZd2"/>
+</div>
+</div>
+<div class="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center">
+<span class="text-label-caps font-label-caps uppercase tracking-widest text-on-surface-variant mb-4">Role para explorar</span>
+<div class="w-[2px] h-12 bg-gradient-to-b from-neon-yellow to-transparent"></div>
+</div>
+</section>
+<!-- Damage Reduction Section (Bento) -->
+<section class="py-section-gap px-margin-desktop bg-surface-container-lowest">
+<div class="text-center mb-16">
+<span class="text-label-caps font-label-caps text-neon-yellow mb-4 block uppercase tracking-[0.3em]">Redução de Danos</span>
+<h2 class="font-display-lg text-headline-xl text-primary">O GORO SEM O PERIGO</h2>
+</div>
+<div class="bento-grid">
+<div class="col-span-12 md:col-span-8 glass-panel p-10 rounded-none border-l-4 border-l-neon-yellow">
+<h3 class="font-headline-md text-headline-md mb-4 text-neon-yellow uppercase italic">Por que evitar Misturas?</h3>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+                        A mistura de cafeína e taurina com álcool mascara o cansaço, levando o corpo ao limite sem que você perceba. O resultado? Aumento da pressão arterial e riscos cardíacos severos. Nossa fórmula entrega o sabor do energético sem os estimulantes perigosos.
+                    </p>
+<div class="mt-8 flex gap-4">
+<div class="flex items-center gap-2 text-neon-green">
+<span class="material-symbols-outlined" data-icon="shield_heart">shield_with_heart</span>
+<span class="font-label-caps text-label-caps">CORAÇÃO PROTEGIDO</span>
+</div>
+<div class="flex items-center gap-2 text-neon-green">
+<span class="material-symbols-outlined" data-icon="bolt">bolt</span>
+<span class="font-label-caps text-label-caps">FOCO LIMPO</span>
+</div>
+</div>
+</div>
+<div class="col-span-12 md:col-span-4 bg-neon-yellow p-10 flex flex-col justify-center text-jet-black">
+<span class="material-symbols-outlined text-5xl mb-4" data-icon="warning">warning</span>
+<h4 class="font-black text-3xl leading-none mb-4 uppercase italic">ZERO CAFEÍNA</h4>
+<h4 class="font-black text-3xl leading-none mb-4 uppercase italic">ZERO TAURINA</h4>
+<h4 class="font-black text-3xl leading-none uppercase italic">ZERO RISCO</h4>
+</div>
+<div class="col-span-12 md:col-span-4 glass-panel p-8 text-center border-b-2 border-neon-green">
+<span class="material-symbols-outlined text-4xl text-neon-green mb-4" data-icon="eco">eco</span>
+<h5 class="font-headline-md text-headline-md mb-2">HIDRATAÇÃO</h5>
+<p class="text-on-surface-variant">Mantém o corpo equilibrado durante a festa.</p>
+</div>
+<div class="col-span-12 md:col-span-8 relative overflow-hidden h-[300px] group">
+<img alt="Effervescence Vibe" class="absolute inset-0 w-full h-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0 group-hover:scale-105" data-alt="A close-up artistic shot of neon yellow effervescent bubbles rising through a crystalline liquid. The background features blurred blue and purple neon light tubes, creating a high-energy nightclub atmosphere. The lighting is dramatic and dark-mode, emphasizing the vibrant neon accents and the liquid's movement. The overall mood is sophisticated and energetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAakj_GH0ecmIPAVOzmAKvbfFNHyMiuHZyFom1L9fA21BzVskdLQiaUMaW2ZE_v-HNVzeLsnYuUCpKF4ejs-2h3arh9XQTaw-M7arP2HngWqNPslyBVn8B6ovxOrEPrHLtHkCpfbR-FyLE7V10uCdBW2qXwHIwUA-BZCEdeVoClrgvs4_1cQZgE1G_RURYZ2WhJbQrELSG_A_dAk-W4ycf0C5DyhGLuxXkIrxuQb58B-mORmqK_5bcDi4VK9Cdpv15ZoYt21IjHx9ut"/>
+<div class="absolute inset-0 bg-jet-black/40 flex items-center p-10">
+<h4 class="font-display-lg text-headline-xl text-white italic">A VIBE DA EFERVESCÊNCIA</h4>
+</div>
+</div>
+</div>
+</section>
+<!-- Bestsellers Carousel (Simplified for Grid) -->
+<section class="py-section-gap px-margin-desktop overflow-hidden">
+<div class="flex justify-between items-end mb-12">
+<h2 class="font-display-lg text-headline-xl uppercase italic">BESTSELLERS <span class="text-neon-yellow">MAROMBA</span></h2>
+<a class="text-label-caps font-label-caps text-neon-yellow border-b border-neon-yellow hover:text-white hover:border-white transition-colors" href="#">VER TUDO</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Product 1 -->
+<div class="group">
+<a href="product.html"><div class="bg-dark-grey aspect-[3/4] relative overflow-hidden mb-6"><img alt="Goro Original" class="absolute inset-0 w-full h-full object-contain p-12 transition-transform duration-500 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCE6x6F7Ge4XzQtE4FaMoQG4eyvY9UBf3_LgoE_98aKg3T0fdPze-CUofsuW6N0_9-rnoim2wPHlchikRc0vyPAEToTxAuAwDLscGcClJFjMyisZpnkIvTFam0KYsmf8RHXOf97xq0tYnVYXFLorvJE-FCwrX9DaK1rKcTiGYVTdIY5aOql0_PC2NRiJs30lG72GYhXKQOPqcRJj3UHNKFQm6nT-Iq6YsyBwgBg5xtjbUAcMHMbiLsGvDlb0XgKjgGpSpDVy4kRUZd2"/>
+<div class="absolute top-4 left-4 bg-neon-yellow text-jet-black px-3 py-1 font-label-caps text-[10px] uppercase">HYPED</div>
+</div></a><div class="flex justify-between items-start"><div><h3 class="font-headline-md text-headline-md mb-1 uppercase tracking-tighter">GORO ORIGINAL</h3>
+<p class="font-body-md text-on-surface-variant italic">Garrafa 750ml</p>
+</div>
+<span class="font-price-display text-price-display text-neon-yellow italic">R$89</span>
+</div>
+<button class="w-full mt-6 border-2 border-neon-green text-neon-green py-3 font-label-caps uppercase hover:bg-neon-green hover:text-jet-black transition-colors">ADICIONAR</button>
+</div>
+<!-- Product 2 -->
+<div class="group">
+<div class="bg-dark-grey aspect-[3/4] relative overflow-hidden mb-6">
+<div class="absolute inset-0 bg-gradient-to-br from-neon-green/10 to-transparent"></div>
+<img alt="Goro Green Apple" class="absolute inset-0 w-full h-full object-contain p-12 transition-transform duration-500 group-hover:scale-110 hue-rotate-[90deg]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCE6x6F7Ge4XzQtE4FaMoQG4eyvY9UBf3_LgoE_98aKg3T0fdPze-CUofsuW6N0_9-rnoim2wPHlchikRc0vyPAEToTxAuAwDLscGcClJFjMyisZpnkIvTFam0KYsmf8RHXOf97xq0tYnVYXFLorvJE-FCwrX9DaK1rKcTiGYVTdIY5aOql0_PC2NRiJs30lG72GYhXKQOPqcRJj3UHNKFQm6nT-Iq6YsyBwgBg5xtjbUAcMHMbiLsGvDlb0XgKjgGpSpDVy4kRUZd2"/>
+<div class="absolute top-4 left-4 bg-neon-green text-jet-black px-3 py-1 font-label-caps text-[10px] uppercase">NEW FLAVOR</div>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-headline-md text-headline-md mb-1 uppercase tracking-tighter">APPLE PUMP</h3>
+<p class="font-body-md text-on-surface-variant italic">Garrafa 750ml</p>
+</div>
+<span class="font-price-display text-price-display text-neon-yellow italic">R$94</span>
+</div>
+<button class="w-full mt-6 border-2 border-neon-green text-neon-green py-3 font-label-caps uppercase hover:bg-neon-green hover:text-jet-black transition-colors">ADICIONAR</button>
+</div>
+<!-- Product 3 -->
+<div class="group">
+<div class="bg-dark-grey aspect-[3/4] relative overflow-hidden mb-6">
+<img alt="Goro Bundle" class="absolute inset-0 w-full h-full object-contain p-12 transition-transform duration-500 group-hover:scale-110 -rotate-12 translate-x-4" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCE6x6F7Ge4XzQtE4FaMoQG4eyvY9UBf3_LgoE_98aKg3T0fdPze-CUofsuW6N0_9-rnoim2wPHlchikRc0vyPAEToTxAuAwDLscGcClJFjMyisZpnkIvTFam0KYsmf8RHXOf97xq0tYnVYXFLorvJE-FCwrX9DaK1rKcTiGYVTdIY5aOql0_PC2NRiJs30lG72GYhXKQOPqcRJj3UHNKFQm6nT-Iq6YsyBwgBg5xtjbUAcMHMbiLsGvDlb0XgKjgGpSpDVy4kRUZd2"/>
+<img alt="Goro Bundle" class="absolute inset-0 w-full h-full object-contain p-12 transition-transform duration-500 group-hover:scale-110 rotate-12 -translate-x-4" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCE6x6F7Ge4XzQtE4FaMoQG4eyvY9UBf3_LgoE_98aKg3T0fdPze-CUofsuW6N0_9-rnoim2wPHlchikRc0vyPAEToTxAuAwDLscGcClJFjMyisZpnkIvTFam0KYsmf8RHXOf97xq0tYnVYXFLorvJE-FCwrX9DaK1rKcTiGYVTdIY5aOql0_PC2NRiJs30lG72GYhXKQOPqcRJj3UHNKFQm6nT-Iq6YsyBwgBg5xtjbUAcMHMbiLsGvDlb0XgKjgGpSpDVy4kRUZd2"/>
+<div class="absolute top-4 left-4 bg-white text-jet-black px-3 py-1 font-label-caps text-[10px] uppercase">BEST VALUE</div>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-headline-md text-headline-md mb-1 uppercase tracking-tighter">COMBO HYPE</h3>
+<p class="font-body-md text-on-surface-variant italic">Pack 2 Garrafas</p>
+</div>
+<span class="font-price-display text-price-display text-neon-yellow italic">R$159</span>
+</div>
+<button class="w-full mt-6 border-2 border-neon-green text-neon-green py-3 font-label-caps uppercase hover:bg-neon-green hover:text-jet-black transition-colors">ADICIONAR</button>
+</div>
+</div>
+</section>
+<!-- Community/Hype Section -->
+<section id="community" class="py-section-gap bg-jet-black border-y border-white/5">
+<div class="container mx-auto px-margin-desktop">
+<div class="flex flex-col md:flex-row gap-gutter items-center">
+<div class="md:w-1/2">
+<h2 class="font-display-lg text-headline-xl mb-8 italic uppercase leading-none">O QUE DIZ A <br/><span class="text-neon-yellow">COMUNIDADE</span></h2>
+<div class="space-y-8">
+<div class="glass-panel p-6 border-r-4 border-r-neon-yellow">
+<p class="italic font-body-lg mb-4 text-white">"Melhor sabor de energético que já tomei, e o melhor: acordo no dia seguinte zero bala pra treinar pesado. O Goro é revolucionário."</p>
+<span class="font-label-caps text-neon-yellow">@MAROMBA_FITNESS</span>
+</div>
+<div class="glass-panel p-6 border-r-4 border-r-neon-green">
+<p class="italic font-body-lg mb-4 text-white">"Estava procurando uma opção pra curtir a rave sem pirar o coração. Achei minha bebida oficial."</p>
+<span class="font-label-caps text-neon-green">@RAVE_LIFE</span>
+</div>
+</div>
+</div>
+<div class="md:w-1/2 relative h-[500px] w-full overflow-hidden">
+<img alt="Lifestyles Maromba" class="w-full h-full object-cover opacity-60" data-alt="A dark-mode, editorial lifestyle image featuring a diverse group of trendy young people at an exclusive underground party. The lighting is atmospheric with deep shadows and high-contrast neon yellow and green light beams. A bottle of Goro is featured prominently in the foreground, being held by someone with a minimalist industrial tattoo. The scene is full of energy and sophisticated urban style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3gfzrvVzP6DqUFf7SOdjKEwhTreZM7BEnFLOq6ZVwdXHFjasQ8hOeZj5LnEnrMy2JcK4uzPFMT7FEvw30n92q085innP7bsoq8yZVHfNxb86iFRf56O0Ir2KfGbDwT3gwY8koJTVzkfeMn0oMMn7dIOrVlwm9sI3vQV0SxS0bZEozdlSUOg4d37ORmZgRrhOosuS12lZTV9Eg4Tg0PS4WYQPTuFSXpLfdWfVhdPFOITMtNTLZVsGMsesv2x6Rr5PPlVPkCZuSETB5"/>
+<div class="absolute inset-0 bg-gradient-to-t from-jet-black via-transparent to-transparent"></div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-jet-black dark:bg-jet-black full-width mt-section-gap border-t border-surface-container-high grid grid-cols-1 md:grid-cols-12 gap-gutter px-margin-desktop py-16">
+<div class="md:col-span-4">
+<div class="text-display-lg font-display-lg text-surface-container-highest opacity-20 uppercase leading-none mb-8">MANSÃO<br/>MAROMBA</div>
+<p class="text-on-surface-variant max-w-xs font-body-md">
+                A primeira marca premium de redução de danos focada no lifestyle bodybuilder e cultura clubber.
+            </p>
+</div>
+<div class="md:col-span-2">
+<h5 class="text-neon-green font-bold uppercase mb-6 tracking-widest">ABOUT</h5>
+<ul class="space-y-4">
+<li><a class="text-on-surface-variant hover:text-neon-green transition-transform duration-200 hover:translate-x-1 block" href="#">Our Story</a></li>
+<li><a class="text-on-surface-variant hover:text-neon-green transition-transform duration-200 hover:translate-x-1 block" href="#">Find Us</a></li>
+<li><a class="text-on-surface-variant hover:text-neon-green transition-transform duration-200 hover:translate-x-1 block" href="#">Careers</a></li>
+</ul>
+</div>
+<div class="md:col-span-2">
+<h5 class="text-neon-green font-bold uppercase mb-6 tracking-widest">SHOP</h5>
+<ul class="space-y-4">
+<li><a class="text-on-surface-variant hover:text-neon-green transition-transform duration-200 hover:translate-x-1 block" href="#">Bestseller</a></li>
+<li><a class="text-on-surface-variant hover:text-neon-green transition-transform duration-200 hover:translate-x-1 block" href="#">Le Spritz</a></li>
+<li><a class="text-on-surface-variant hover:text-neon-green transition-transform duration-200 hover:translate-x-1 block" href="#">The Apéritif</a></li>
+<li><a class="text-on-surface-variant hover:text-neon-green transition-transform duration-200 hover:translate-x-1 block" href="#">Le Fizz</a></li>
+</ul>
+</div>
+<div class="md:col-span-4">
+<h5 class="text-neon-green font-bold uppercase mb-6 tracking-widest">JOIN THE CIRCLE</h5>
+<p class="text-on-surface-variant mb-4 font-body-md">Be The First To Sip Something New. Thoughtful Updates, No Clutter.</p>
+<div class="flex border-b border-on-surface-variant focus-within:border-neon-yellow transition-colors py-2">
+<input class="bg-transparent border-none focus:ring-0 w-full text-white" placeholder="Email" type="email"/>
+<button class="text-neon-yellow material-symbols-outlined" data-icon="arrow_forward">arrow_forward</button>
+</div>
+<div class="mt-8 text-on-surface-variant font-label-caps text-[10px] tracking-widest">
+                © 2024 MANSÃO MAROMBA. NO REGRETS.
+            </div>
+</div>
+</footer>
+<!-- BottomNavBar (Mobile) -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 py-3 bg-jet-black/80 backdrop-blur-2xl dark:bg-jet-black/90 md:hidden border-t border-outline-variant shadow-2xl">
+<a class="flex flex-col items-center justify-center text-neon-yellow bg-surface-container-highest/50 rounded-xl p-2" href="shop.html"><span class="material-symbols-outlined" data-icon="bolt">bolt</span><span class="text-label-caps font-label-caps mt-1">Shop</span></a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant p-2 active:bg-surface-variant" href="about.html"><span class="material-symbols-outlined" data-icon="shield_heart">shield_with_heart</span><span class="text-label-caps font-label-caps mt-1">Damage</span></a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant p-2 active:bg-surface-variant" href="index.html#community"><span class="material-symbols-outlined" data-icon="groups">groups</span><span class="text-label-caps font-label-caps mt-1">Community</span></a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant p-2 active:bg-surface-variant" href="cart.html"><span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span><span class="text-label-caps font-label-caps mt-1">Cart</span></a>
+</nav>
+<script>
+        // Smooth Scroll Micro-interactions
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Background Bubble Animation for specific sections
+        function createBubble() {
+            const container = document.querySelector('.relative.overflow-hidden.h-\\[300px\\]');
+            if (!container) return;
+            
+            const bubble = document.createElement('div');
+            bubble.classList.add('bubble');
+            
+            const size = Math.random() * 10 + 5 + 'px';
+            bubble.style.width = size;
+            bubble.style.height = size;
+            bubble.style.left = Math.random() * 100 + '%';
+            bubble.style.bottom = '-10px';
+            
+            container.appendChild(bubble);
+            
+            const animation = bubble.animate([
+                { transform: 'translateY(0) scale(1)', opacity: 0.6 },
+                { transform: `translateY(-300px) scale(1.5)`, opacity: 0 }
+            ], {
+                duration: Math.random() * 2000 + 3000,
+                easing: 'ease-out'
+            });
+            
+            animation.onfinish = () => bubble.remove();
+        }
+
+        setInterval(createBubble, 300);
+
+        // Interaction scale effect for icons
+        document.querySelectorAll('.material-symbols-outlined').forEach(icon => {
+            icon.addEventListener('click', function() {
+                this.classList.add('scale-75');
+                setTimeout(() => this.classList.remove('scale-75'), 150);
+            });
+        });
+    </script>
+</body></html>

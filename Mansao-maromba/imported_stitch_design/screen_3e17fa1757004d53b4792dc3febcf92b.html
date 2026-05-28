@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Anybody:ital,wght@0,100..900;1,100..900&amp;family=Space+Grotesk:wght@300..700&amp;family=Hanken+Grotesk:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-surface-variant": "#cac8aa",
+                    "surface-tint": "#cdcd00",
+                    "primary": "#ffffff",
+                    "on-tertiary-fixed": "#1c1b1b",
+                    "on-tertiary": "#313030",
+                    "on-primary": "#323200",
+                    "neon-green": "#39FF14",
+                    "background": "#131313",
+                    "on-secondary": "#053900",
+                    "tertiary-container": "#e5e2e1",
+                    "surface-container-low": "#1c1b1b",
+                    "on-tertiary-container": "#656464",
+                    "on-error-container": "#ffdad6",
+                    "on-secondary-fixed": "#022100",
+                    "on-primary-container": "#686800",
+                    "secondary-fixed": "#79ff5b",
+                    "on-tertiary-fixed-variant": "#474646",
+                    "on-background": "#e5e2e1",
+                    "surface-container-highest": "#353535",
+                    "on-secondary-container": "#0f6d00",
+                    "surface-variant": "#353535",
+                    "error-container": "#93000a",
+                    "surface-container-high": "#2a2a2a",
+                    "inverse-primary": "#626200",
+                    "dark-grey": "#121212",
+                    "on-error": "#690005",
+                    "outline-variant": "#484831",
+                    "neon-yellow": "#FFFF00",
+                    "off-white": "#F5F5F5",
+                    "inverse-surface": "#e5e2e1",
+                    "surface-container": "#20201f",
+                    "on-surface": "#e5e2e1",
+                    "surface-dim": "#131313",
+                    "primary-fixed": "#eaea00",
+                    "primary-container": "#eaea00",
+                    "error": "#ffb4ab",
+                    "on-secondary-fixed-variant": "#095300",
+                    "on-primary-fixed": "#1d1d00",
+                    "tertiary-fixed-dim": "#c9c6c5",
+                    "inverse-on-surface": "#313030",
+                    "tertiary": "#ffffff",
+                    "surface-bright": "#393939",
+                    "surface": "#131313",
+                    "surface-container-lowest": "#0e0e0e",
+                    "secondary-fixed-dim": "#2ae500",
+                    "on-primary-fixed-variant": "#494900",
+                    "secondary": "#d7ffc5",
+                    "tertiary-fixed": "#e5e2e1",
+                    "secondary-container": "#2ff801",
+                    "outline": "#939277",
+                    "jet-black": "#050505",
+                    "primary-fixed-dim": "#cdcd00"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "unit": "4px",
+                    "section-gap": "128px",
+                    "margin-mobile": "20px",
+                    "gutter": "24px",
+                    "margin-desktop": "64px"
+            },
+            "fontFamily": {
+                    "display-lg-mobile": ["Anybody"],
+                    "label-caps": ["Space Grotesk"],
+                    "headline-md": ["Anybody"],
+                    "display-lg": ["Anybody"],
+                    "headline-xl": ["Anybody"],
+                    "body-md": ["Hanken Grotesk"],
+                    "price-display": ["Anybody"],
+                    "body-lg": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                    "display-lg-mobile": ["48px", {"lineHeight": "95%", "fontWeight": "900"}],
+                    "label-caps": ["12px", {"lineHeight": "100%", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                    "headline-md": ["24px", {"lineHeight": "120%", "fontWeight": "700"}],
+                    "display-lg": ["84px", {"lineHeight": "90%", "letterSpacing": "-0.04em", "fontWeight": "900"}],
+                    "headline-xl": ["42px", {"lineHeight": "110%", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "body-md": ["16px", {"lineHeight": "150%", "fontWeight": "400"}],
+                    "price-display": ["32px", {"lineHeight": "100%", "fontWeight": "900"}],
+                    "body-lg": ["18px", {"lineHeight": "160%", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .text-glow {
+            text-shadow: 0 0 15px rgba(255, 255, 0, 0.4);
+        }
+        .stencil-cut {
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 95% 100%, 0 100%);
+        }
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #050505; }
+        ::-webkit-scrollbar-thumb { background: #FFFF00; }
+    </style>
+</head>
+<body class="bg-jet-black text-on-surface font-body-md overflow-x-hidden selection:bg-neon-yellow selection:text-jet-black">
+<!-- Top Navigation Shell -->
+<nav class="bg-surface/10 backdrop-blur-xl dark:bg-jet-black/20 text-primary dark:text-neon-yellow docked full-width top-0 sticky z-50 border-b border-white/5 flex justify-between items-center w-full px-margin-desktop py-4">
+<div class="text-headline-md font-headline-md font-black text-primary italic dark:text-neon-yellow">
+            MANSÃO MAROMBA
+        </div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="text-label-caps font-label-caps uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors hover:bg-white/5 transition-all duration-300" href="#">SHOP</a>
+<a class="text-label-caps font-label-caps uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors hover:bg-white/5 transition-all duration-300" href="#">FLAVORS</a>
+<a class="text-label-caps font-label-caps uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors hover:bg-white/5 transition-all duration-300" href="#">DAMAGE REDUCTION</a>
+<a class="text-label-caps font-label-caps uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors hover:bg-white/5 transition-all duration-300" href="#">HYPE</a>
+</div>
+<div class="flex items-center gap-6">
+<span class="material-symbols-outlined cursor-pointer hover:bg-white/5 transition-all duration-300 p-2 scale-95 active:scale-90 transition-transform" data-icon="shopping_cart">shopping_cart</span>
+<span class="material-symbols-outlined cursor-pointer hover:bg-white/5 transition-all duration-300 p-2 scale-95 active:scale-90 transition-transform" data-icon="person">person</span>
+</div>
+</nav>
+<!-- Hero Section -->
+<header class="relative w-full h-screen overflow-hidden flex flex-col justify-end pb-32 px-margin-desktop">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover filter grayscale contrast-125 brightness-50" data-alt="A cinematic, high-contrast wide shot of a gritty industrial gym warehouse at night. The space is filled with heavy cast iron equipment and harsh fluorescent lighting that casts long dramatic shadows. A subtle neon yellow haze permeates the atmosphere, reflecting the brand's electric energy. Bodybuilders in dark street-style apparel move through the space with focused intensity, creating a mood of raw power and underground athletic culture." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjFhVfpK1Udf3tLJ5_Ay7mUEpISfGW_D1pGGc8gfO5DBFmlbpZ7H1i5C8gDL8el4wCvCk3xoLUn9j6t5fU0r8SI14LVHYiAa5pLXgePDwzci-mX3AD2zbdykW8t7Be9jbNRxeiX81isA2H_2rMGEt_oAPUGPIkLCo9wjcxaYMn6_47IlFqLVngQlt7Rw02kTNXeKPEP66Kl9GwtXX3E4Df0_z370uMnf29KANrRq5VYgcsQ4WoNGmDGssVCoRVMgUixxYkmj9eP39d"/>
+<div class="absolute inset-0 bg-gradient-to-t from-jet-black via-transparent to-transparent"></div>
+</div>
+<div class="relative z-10 max-w-4xl">
+<span class="text-label-caps font-label-caps text-neon-yellow mb-4 block">ESTABLISHED BY TOGURO</span>
+<h1 class="text-display-lg font-display-lg italic text-white leading-none mb-6">
+                MAIS QUE UM LUGAR,<br/>
+<span class="text-neon-yellow">UM ESTADO DE ESPÍRITO.</span>
+</h1>
+<p class="text-body-lg font-body-lg text-on-surface-variant max-w-2xl">
+                A Mansão Maromba é o epicentro da cultura fitness underground brasileira. Onde o asfalto encontra o aço e o lifestyle noturno se funde com a disciplina do bodybuilder.
+            </p>
+</div>
+</header>
+<!-- Our Mission (Asymmetric Layout) -->
+<section class="py-section-gap px-margin-desktop grid grid-cols-12 gap-gutter items-center">
+<div class="col-span-12 md:col-span-5 order-2 md:order-1">
+<div class="bg-surface-container p-12 border-l-4 border-neon-yellow stencil-cut">
+<h2 class="text-headline-xl font-headline-xl text-white mb-8">NOSSA MISSÃO</h2>
+<p class="text-body-md font-body-md text-on-surface-variant mb-6 leading-relaxed">
+                    Fundada por Toguro, a Mansão Maromba nasceu com o propósito de democratizar o acesso à alta performance e ao estilo de vida dos grandes ídolos do esporte. 
+                </p>
+<p class="text-body-md font-body-md text-on-surface-variant leading-relaxed">
+                    Não somos apenas um suplemento ou um canal de conteúdo. Somos o suporte para quem vive no limite entre a rotina exaustiva do trabalho e a busca pelo shape inexplicável.
+                </p>
+</div>
+</div>
+<div class="col-span-12 md:col-span-6 md:col-start-7 order-1 md:order-2 mb-12 md:mb-0">
+<div class="relative group">
+<div class="absolute -inset-4 border border-neon-yellow/30 translate-x-4 translate-y-4 group-hover:translate-x-2 group-hover:translate-y-2 transition-transform"></div>
+<img class="relative z-10 w-full aspect-[4/5] object-cover filter grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="A portrait-style editorial photograph of a professional bodybuilder in a dark urban setting. The athlete is wearing a black oversized hoodie with a minimalist industrial logo. Lighting is dramatic side-lighting with a cool blue and neon yellow tint, highlighting muscle definition and skin texture. The background is a blurred cityscape of São Paulo at night, capturing the fusion of street culture and elite fitness." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDezDfFZ5mMpvjdpwWdBt7gq78_rEZrSbzNcpbRSEMKeMGXxyc1MwerxxOK-0WOCp9P6mIyLtHzevyAmnBNjWLk6lndNUj8lCYfmmzvuk4-R0kaTJus-o78IHHWU_EvL_SojSqmqX2zQnd5wFxU90KMotbeLqhgG-J6hTiw6xBdLOb0KuarBd2XaYE6BqNVnMTO2_5kV9uvfijfnQLld0k3ITuAMwvj_dVbP20gIw0lW7IU3qqqLlpM68m2u6MkiWtnpTR9huRNIc-z"/>
+</div>
+</div>
+</section>
+<!-- Damage Reduction (Industrial Glassmorphism) -->
+<section class="py-section-gap bg-surface-container-low relative overflow-hidden">
+<div class="absolute top-0 right-0 p-margin-desktop opacity-5 select-none pointer-events-none">
+<span class="text-display-lg font-display-lg text-white">REDUÇÃO DE DANOS</span>
+</div>
+<div class="max-w-7xl mx-auto px-margin-desktop">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+<div>
+<span class="inline-block py-1 px-3 bg-neon-green text-jet-black text-label-caps font-label-caps mb-6">PROTOCOLO SEGURO</span>
+<h2 class="text-headline-xl font-headline-xl text-white mb-6">FILOSOFIA "GORO" &amp; REDUÇÃO DE DANOS</h2>
+<p class="text-body-lg font-body-lg text-on-surface-variant mb-8">
+                        Entendemos que o estilo de vida maromba nem sempre é linear. Existe a festa, existe o social, existe a "vida real". 
+                    </p>
+<div class="grid grid-cols-1 gap-6">
+<div class="flex items-start gap-4 p-6 bg-jet-black border border-white/5 hover:border-neon-yellow/50 transition-colors">
+<span class="material-symbols-outlined text-neon-yellow text-4xl" data-icon="health_and_safety">health_and_safety</span>
+<div>
+<h4 class="text-headline-md font-headline-md text-white mb-2">Suporte Metabólico</h4>
+<p class="text-body-md font-body-md text-on-surface-variant">Fórmulas desenhadas para proteger seu organismo enquanto você busca seus limites.</p>
+</div>
+</div>
+<div class="flex items-start gap-4 p-6 bg-jet-black border border-white/5 hover:border-neon-yellow/50 transition-colors">
+<span class="material-symbols-outlined text-neon-yellow text-4xl" data-icon="science">science</span>
+<div>
+<h4 class="text-headline-md font-headline-md text-white mb-2">Sabor Energético</h4>
+<p class="text-body-md font-body-md text-on-surface-variant">O "Goro" perfeito: sabor agressivo de fruta com a densidade energética que seu treino exige.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="relative">
+<div class="aspect-square bg-dark-grey border border-white/10 relative flex items-center justify-center">
+<img class="w-3/4 h-3/4 object-contain" data-alt="Product photography of a sleek, matte black energy drink can with neon yellow typography. The can is resting on a wet industrial metal surface with water droplets reflecting neon green lights from above. The lighting is low-key and moody, focusing on the sharp textures of the can and the vibrant liquid splashes in the background, embodying the premium and aggressive brand aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCb0y66_WtdYwYCI0M6m8ESclIVSBjLurYRKWxM2kIZAcn_BoFtKopn3UMk0F-r9ysUWiPmlUdhU3HKkl-LjMStqgsWwGq4i0Zpf_16FuQTwAKdETcV_V4yEHr6ilWdrQfAt-iu-1i5R1J-718BKsD66SrgE42gRX_NL8FxkENokNZMtGePKpFXLWm2quac_eeCy8UOHiGfylCVJ82tZdi48Q6aDazIi2S4ljeFYPcqujNyPmKIWAcbKiNlJ44GFy4xl6vHNRLjiVyM"/>
+<div class="absolute bottom-0 left-0 p-8">
+<span class="text-price-display font-price-display text-neon-yellow">HARDCORE</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- The Community (Bento Grid) -->
+<section class="py-section-gap px-margin-desktop">
+<div class="text-center mb-16">
+<h2 class="text-display-lg-mobile md:text-display-lg font-display-lg text-white mb-4">O CLAN MAROMBA</h2>
+<p class="text-label-caps font-label-caps text-on-surface-variant tracking-[0.4em]">NOSSA COMUNIDADE, NOSSA LEI</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 gap-4 h-auto md:h-[800px]">
+<div class="md:col-span-2 md:row-span-2 relative group overflow-hidden">
+<img class="w-full h-full object-cover grayscale group-hover:scale-105 transition-transform duration-700" data-alt="A wide-angle photo of a high-energy community gathering at Mansão Maromba. A diverse group of athletes and creators are training together in a space lit by industrial strobe lights and neon yellow tubes. The energy is palpable, with people cheering each other on. The style is raw, grainy, and documentary-like, capturing an authentic moment of connection and shared intensity within the bodybuilding lifestyle." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGfcLW9qRMdha3TqGu6LwACr6PkponNhNaBkJnVxxPE3xSFleDyYM1mqN6Zl4doYfgcEvLv490BOfAH5YFo99nw5wW8no5X5o3mAFCUfHwPfs6fEAesqI9THn8VJOaYhk-6RUvdXKrd5aePCFm8VyW3KsURb_9GtTLGCW6p8upEK-OD1AphsE9Au1WqswNimQhlNyAjzvyvbSzBilZh_bkawFfxFN6ulKh7s011yBQ9EB8ack3-OMg4bI44Ly4Jc-NvQJP7yUKcMzX"/>
+<div class="absolute inset-0 bg-gradient-to-t from-jet-black to-transparent opacity-80"></div>
+<div class="absolute bottom-8 left-8">
+<h3 class="text-headline-xl font-headline-xl text-white">IRMANDADE</h3>
+<p class="text-body-md font-body-md text-neon-yellow">Unidos pelo suor e pelo objetivo.</p>
+</div>
+</div>
+<div class="md:col-span-2 relative group overflow-hidden">
+<img class="w-full h-full object-cover grayscale group-hover:scale-105 transition-transform duration-700" data-alt="A high-contrast photo of a nightclub dancefloor where clubbers and fitness enthusiasts mix. Dark shadows are punctuated by sharp neon yellow laser beams cutting through artificial fog. The atmosphere is electric and exclusive, showing the crossover between the intense gym lifestyle and the underground nightlife scene. The photography is editorial and fast-paced." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDBTQe_uCWm0fBhzSdg3JAwLwRR4P2PYpaTjRM6efcyqd16mrReewgAbv4hoLpiUH5cekRpAICeZX2Qms1MionrOF7CwVzzF5iPTuEq7t53ExNivNmijswAmodemQ6_I3op-kppxeuO_7L2MJ5k-89KEzLrG87e53L3SXGt6E_L_ubukmdxTOXM897R0CozShuRL7IESC_T2NjzIZeynu_DjfasbSpbuXEc2yjGl1fONaRIVoG7ty699WpsYEnJUQs9MfVgytVrBv2H"/>
+<div class="absolute inset-0 bg-jet-black/40"></div>
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center">
+<span class="text-headline-md font-headline-md text-white border-2 border-neon-yellow px-6 py-2">NIGHTLIFE</span>
+</div>
+</div>
+<div class="relative group overflow-hidden">
+<img class="w-full h-full object-cover grayscale group-hover:scale-105 transition-transform duration-700" data-alt="Macro detail shot of a gym chalk-covered hand gripping a heavy barbell. The textures are exaggerated, showing the raw grit of the bodybuilding world. Lighting is high-contrast black and white with a single yellow spotlight hitting the metallic texture of the bar. This image represents the 'discipline' pillar of the brand's identity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDV8J0MTxLIZx_pd7LXOk7qCDLu-7Vt2SkTFJhA1mfPn8iL_OuBmlWvQ3v2VfMGzQP72Mcxd9WzZmypMPETeO5JW8dJTM26-xSXDwkc8tdre0sbgXNrAKtiTzNG2tNIByfRoAShC3PY-U2s1NLDb_WuX2rZcjUDobXss7mwi4nCRH1mc8flvNFeKiP3kp0XWo8B14PZoUYNYiRdvgBTYHeEtDoKtwaY04-vV_NJXPXPZolU85nVuhTeN6VwkgC8thgFtb0bT6xJ9tgh"/>
+<div class="absolute inset-0 bg-neon-yellow/10 group-hover:bg-transparent transition-colors"></div>
+</div>
+<div class="relative group bg-neon-yellow p-8 flex flex-col justify-between">
+<span class="material-symbols-outlined text-jet-black text-6xl" data-icon="groups">groups</span>
+<div>
+<p class="text-headline-md font-headline-md text-jet-black leading-tight italic">MAIS DE 10 MILHÕES DE SEGUIDORES</p>
+<p class="text-label-caps font-label-caps text-jet-black/60 mt-2">Junte-se à revolução.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer Shell -->
+<footer class="bg-jet-black dark:bg-jet-black border-t border-surface-container-high grid grid-cols-1 md:grid-cols-12 gap-gutter px-margin-desktop py-16 mt-section-gap relative overflow-hidden">
+<div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-neon-yellow to-transparent"></div>
+<div class="md:col-span-12 mb-12">
+<div class="text-display-lg font-display-lg text-surface-container-highest opacity-20 uppercase">
+                MANSÃO MAROMBA
+            </div>
+</div>
+<div class="md:col-span-4 space-y-6">
+<h4 class="text-label-caps font-label-caps text-neon-yellow">STAY DANGEROUS</h4>
+<div class="flex border-b border-white/20 pb-2">
+<input class="bg-transparent border-none focus:ring-0 text-white w-full placeholder:text-on-surface-variant font-label-caps" placeholder="YOUR EMAIL" type="email"/>
+<button class="text-neon-yellow material-symbols-outlined" data-icon="arrow_forward">arrow_forward</button>
+</div>
+<p class="text-body-md font-body-md text-on-surface-variant max-w-xs">
+                Receba drops exclusivos e informações sobre novos sabores do Goro direto no seu radar.
+            </p>
+</div>
+<div class="md:col-span-2 md:col-start-7 space-y-4">
+<h5 class="text-label-caps font-label-caps text-white">NAVIGATE</h5>
+<ul class="space-y-2">
+<li><a class="text-on-surface-variant hover:text-neon-green hover:translate-x-1 transition-transform duration-200 block" href="#">Shop All</a></li>
+<li><a class="text-on-surface-variant hover:text-neon-green hover:translate-x-1 transition-transform duration-200 block" href="#">Flavors</a></li>
+<li><a class="text-on-surface-variant hover:text-neon-green hover:translate-x-1 transition-transform duration-200 block" href="#">Academy</a></li>
+</ul>
+</div>
+<div class="md:col-span-2 space-y-4">
+<h5 class="text-label-caps font-label-caps text-white">LEGAL</h5>
+<ul class="space-y-2">
+<li><a class="text-on-surface-variant hover:text-neon-green hover:translate-x-1 transition-transform duration-200 block" href="#">Privacy Policy</a></li>
+<li><a class="text-on-surface-variant hover:text-neon-green hover:translate-x-1 transition-transform duration-200 block" href="#">Terms of Service</a></li>
+<li><a class="text-on-surface-variant hover:text-neon-green hover:translate-x-1 transition-transform duration-200 block" href="#">Wholesale</a></li>
+</ul>
+</div>
+<div class="md:col-span-2 space-y-4">
+<h5 class="text-label-caps font-label-caps text-white">CONNECT</h5>
+<ul class="space-y-2">
+<li><a class="text-on-surface-variant hover:text-neon-green hover:translate-x-1 transition-transform duration-200 block" href="#">Instagram</a></li>
+<li><a class="text-on-surface-variant hover:text-neon-green hover:translate-x-1 transition-transform duration-200 block" href="#">YouTube</a></li>
+<li><a class="text-on-surface-variant hover:text-neon-green hover:translate-x-1 transition-transform duration-200 block" href="#">Contact</a></li>
+</ul>
+</div>
+<div class="md:col-span-12 mt-12 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">
+<span class="text-body-md font-body-md text-on-surface-variant opacity-50">© 2024 MANSÃO MAROMBA. NO REGRETS.</span>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="security">security</span>
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="payments">payments</span>
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="local_shipping">local_shipping</span>
+</div>
+</div>
+</footer>
+<!-- Mobile Bottom Nav -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 py-3 bg-jet-black/80 backdrop-blur-2xl dark:bg-jet-black/90 border-t border-outline-variant md:hidden">
+<div class="flex flex-col items-center justify-center text-on-surface-variant p-2 active:bg-surface-variant">
+<span class="material-symbols-outlined text-neon-yellow" data-icon="bolt">bolt</span>
+<span class="text-label-caps font-label-caps text-neon-yellow mt-1">Shop</span>
+</div>
+<div class="flex flex-col items-center justify-center text-on-surface-variant p-2 active:bg-surface-variant">
+<span class="material-symbols-outlined" data-icon="shield_heart">shield_with_heart</span>
+<span class="text-label-caps font-label-caps mt-1">Damage</span>
+</div>
+<div class="flex flex-col items-center justify-center text-neon-yellow bg-surface-container-highest/50 rounded-xl p-2">
+<span class="material-symbols-outlined" data-icon="groups">groups</span>
+<span class="text-label-caps font-label-caps mt-1">About</span>
+</div>
+<div class="flex flex-col items-center justify-center text-on-surface-variant p-2 active:bg-surface-variant">
+<span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
+<span class="text-label-caps font-label-caps mt-1">Cart</span>
+</div>
+</nav>
+<script>
+        // Micro-interactions and simple effects
+        document.querySelectorAll('.active\\:scale-90').forEach(el => {
+            el.addEventListener('click', () => {
+                el.classList.add('pulse-animation');
+                setTimeout(() => el.classList.remove('pulse-animation'), 300);
+            });
+        });
+
+        // Sticky Header effect on scroll
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('bg-jet-black/90');
+                nav.classList.remove('bg-surface/10');
+            } else {
+                nav.classList.add('bg-surface/10');
+                nav.classList.remove('bg-jet-black/90');
+            }
+        });
+    </script>
+</body></html>

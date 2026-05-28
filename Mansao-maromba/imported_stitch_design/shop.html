@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SHOP | MANSÃO MAROMBA</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Anybody:wght@700;800;900&amp;family=Hanken+Grotesk:wght@400;700&amp;family=Space+Grotesk:wght@700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Anybody:wght@100..900&amp;family=Hanken+Grotesk:wght@100..900&amp;family=Space+Grotesk:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary-container": "#eaea00",
+                    "dark-grey": "#121212",
+                    "error-container": "#93000a",
+                    "background": "#131313",
+                    "inverse-surface": "#e5e2e1",
+                    "on-surface-variant": "#cac8aa",
+                    "on-tertiary-fixed": "#1c1b1b",
+                    "inverse-primary": "#626200",
+                    "primary": "#ffffff",
+                    "surface": "#131313",
+                    "on-background": "#e5e2e1",
+                    "surface-tint": "#cdcd00",
+                    "on-primary-fixed": "#1d1d00",
+                    "tertiary-container": "#e5e2e1",
+                    "on-secondary-container": "#0f6d00",
+                    "on-error-container": "#ffdad6",
+                    "surface-variant": "#353535",
+                    "tertiary-fixed": "#e5e2e1",
+                    "primary-fixed": "#eaea00",
+                    "neon-green": "#39FF14",
+                    "surface-container-highest": "#353535",
+                    "jet-black": "#050505",
+                    "secondary-container": "#2ff801",
+                    "surface-container-low": "#1c1b1b",
+                    "outline": "#939277",
+                    "error": "#ffb4ab",
+                    "on-error": "#690005",
+                    "neon-yellow": "#FFFF00",
+                    "surface-container-high": "#2a2a2a",
+                    "surface-dim": "#131313",
+                    "surface-container-lowest": "#0e0e0e",
+                    "on-tertiary-fixed-variant": "#474646",
+                    "secondary": "#d7ffc5",
+                    "surface-container": "#20201f",
+                    "surface-bright": "#393939",
+                    "off-white": "#F5F5F5",
+                    "primary-fixed-dim": "#cdcd00",
+                    "on-tertiary": "#313030",
+                    "secondary-fixed-dim": "#2ae500",
+                    "secondary-fixed": "#79ff5b",
+                    "on-secondary-fixed-variant": "#095300",
+                    "outline-variant": "#484831",
+                    "on-primary": "#323200",
+                    "on-secondary-fixed": "#022100",
+                    "on-secondary": "#053900",
+                    "inverse-on-surface": "#313030",
+                    "on-primary-container": "#686800",
+                    "on-surface": "#e5e2e1",
+                    "tertiary-fixed-dim": "#c9c6c5",
+                    "on-primary-fixed-variant": "#494900",
+                    "tertiary": "#ffffff",
+                    "on-tertiary-container": "#656464"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin-mobile": "20px",
+                    "section-gap": "128px",
+                    "margin-desktop": "64px",
+                    "gutter": "24px",
+                    "unit": "4px"
+            },
+            "fontFamily": {
+                    "display-lg-mobile": ["Anybody"],
+                    "body-md": ["Hanken Grotesk"],
+                    "body-lg": ["Hanken Grotesk"],
+                    "headline-md": ["Anybody"],
+                    "display-lg": ["Anybody"],
+                    "headline-xl": ["Anybody"],
+                    "price-display": ["Anybody"],
+                    "label-caps": ["Space Grotesk"]
+            },
+            "fontSize": {
+                    "display-lg-mobile": ["48px", {"lineHeight": "95%", "fontWeight": "900"}],
+                    "body-md": ["16px", {"lineHeight": "150%", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "160%", "fontWeight": "400"}],
+                    "headline-md": ["24px", {"lineHeight": "120%", "fontWeight": "700"}],
+                    "display-lg": ["84px", {"lineHeight": "90%", "letterSpacing": "-0.04em", "fontWeight": "900"}],
+                    "headline-xl": ["42px", {"lineHeight": "110%", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "price-display": ["32px", {"lineHeight": "100%", "fontWeight": "900"}],
+                    "label-caps": ["12px", {"lineHeight": "100%", "letterSpacing": "0.1em", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .text-label-caps { font-family: 'Space Grotesk', sans-serif; text-transform: uppercase; letter-spacing: 0.1em; }
+        
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+        .product-card:hover .product-img { transform: scale(1.05); transition: transform 0.5s cubic-bezier(0.2, 0, 0, 1); }
+        .product-card .glow-overlay { opacity: 0; transition: opacity 0.3s ease; }
+        .product-card:hover .glow-overlay { opacity: 1; }
+
+        .industrial-divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #1A1A1A 20%, #1A1A1A 80%, transparent);
+        }
+
+        @keyframes pulse-neon {
+            0% { box-shadow: 0 0 5px #FFFF00; }
+            50% { box-shadow: 0 0 20px #FFFF00; }
+            100% { box-shadow: 0 0 5px #FFFF00; }
+        }
+        .active-neon-pulse { animation: pulse-neon 2s infinite; }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-neon-yellow selection:text-jet-black">
+<!-- Top Navigation -->
+<header class="bg-surface/10 backdrop-blur-xl dark:bg-jet-black/20 docked full-width top-0 sticky z-50 border-b border-white/5 flex justify-between items-center w-full px-margin-desktop py-4">
+<div class="flex items-center gap-8">
+<a class="text-headline-md font-headline-md font-black text-primary italic dark:text-neon-yellow" href="product.html">MANSÃO MAROMBA</a>
+<nav class="hidden md:flex gap-6 items-center">
+<a class="text-neon-yellow border-b-2 border-neon-yellow pb-1 text-label-caps font-label-caps uppercase tracking-widest" href="shop.html">SHOP</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors text-label-caps font-label-caps uppercase tracking-widest" href="index.html">FLAVORS</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors text-label-caps font-label-caps uppercase tracking-widest" href="about.html">DAMAGE REDUCTION</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors text-label-caps font-label-caps uppercase tracking-widest" href="index.html#community">HYPE</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<div class="hidden md:flex items-center bg-white/5 px-4 py-2 rounded-full border border-white/10 group focus-within:border-neon-yellow transition-all">
+<span class="material-symbols-outlined text-on-surface-variant group-focus-within:text-neon-yellow text-[20px]">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-label-caps text-on-surface-variant w-32 placeholder:text-on-surface-variant/30" placeholder="BUSCAR" type="text"/>
+</div>
+<button class="hover:bg-white/5 transition-all duration-300 p-2 rounded-full scale-95 active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-primary dark:text-neon-yellow">shopping_cart</span>
+</button>
+<button class="hover:bg-white/5 transition-all duration-300 p-2 rounded-full scale-95 active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-primary dark:text-neon-yellow">person</span>
+</button>
+</div>
+</header>
+<main class="min-h-screen">
+<!-- Hero Title Section -->
+<section class="px-margin-desktop pt-20 pb-12 overflow-hidden">
+<div class="flex flex-col md:flex-row justify-between items-end gap-gutter">
+<div class="max-w-4xl">
+<h1 class="font-display-lg text-display-lg uppercase leading-none mb-4">
+                        A FORÇA DO <br/>
+<span class="text-neon-yellow italic">UNDERGROUND</span>
+</h1>
+<p class="text-body-lg text-on-surface-variant max-w-xl">
+                        Nossa linha de bebidas premium foi projetada para quem não aceita o comum. Performance, sabor extremo e a estética industrial da Mansão Maromba em cada gota.
+                    </p>
+</div>
+<div class="flex gap-4 mb-2">
+<span class="px-4 py-1 border border-neon-green text-neon-green text-label-caps font-label-caps rounded-full">ESTOQUE LIMITADO</span>
+<span class="px-4 py-1 border border-primary text-primary text-label-caps font-label-caps rounded-full">PRODUTO OFICIAL</span>
+</div>
+</div>
+</section>
+<!-- Filters Section -->
+<section class="px-margin-desktop sticky top-[73px] z-40 bg-background py-6 border-y border-white/5">
+<div class="flex flex-nowrap overflow-x-auto no-scrollbar gap-4 items-center">
+<button class="bg-neon-yellow text-jet-black px-6 py-2 font-label-caps text-label-caps flex-shrink-0">TODOS</button>
+<button class="border border-white/10 hover:border-neon-yellow transition-colors text-on-surface-variant hover:text-neon-yellow px-6 py-2 font-label-caps text-label-caps flex-shrink-0">ALCOÓLICOS</button>
+<button class="border border-white/10 hover:border-neon-yellow transition-colors text-on-surface-variant hover:text-neon-yellow px-6 py-2 font-label-caps text-label-caps flex-shrink-0">NÃO ALCOÓLICOS</button>
+<button class="border border-white/10 hover:border-neon-yellow transition-colors text-on-surface-variant hover:text-neon-yellow px-6 py-2 font-label-caps text-label-caps flex-shrink-0">LINHA PREMIUM</button>
+<button class="border border-white/10 hover:border-neon-yellow transition-colors text-on-surface-variant hover:text-neon-yellow px-6 py-2 font-label-caps text-label-caps flex-shrink-0">LANÇAMENTOS</button>
+<div class="ml-auto hidden md:flex items-center gap-2 text-on-surface-variant">
+<span class="text-label-caps opacity-50">ORDENAR POR:</span>
+<select class="bg-transparent border-none text-label-caps focus:ring-0 cursor-pointer">
+<option class="bg-jet-black">RELEVÂNCIA</option>
+<option class="bg-jet-black">MENOR PREÇO</option>
+<option class="bg-jet-black">MAIOR PREÇO</option>
+</select>
+</div>
+</div>
+</section>
+<!-- Product Grid (Bento/Asymmetric Style) -->
+<section class="px-margin-desktop py-section-gap">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Large Highlight Card -->
+<div class="md:col-span-8 group relative bg-dark-grey overflow-hidden border border-white/5 product-card">
+<div class="absolute top-6 left-6 z-10">
+<span class="bg-neon-green text-jet-black px-4 py-1 text-label-caps font-black italic">MAIS VENDIDO</span>
+</div>
+<div class="p-12 flex flex-col md:flex-row items-center gap-12">
+<div class="w-full md:w-1/2 product-img transition-transform duration-700">
+<img alt="Tropical Energy Beverage" class="w-full h-auto drop-shadow-[0_0_50px_rgba(57,255,20,0.3)]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBzzmudjN95usfQQGvkPRpeXv_0zZtuy0YprVwTKydWcqnJK9XNG_TL_KfyorbtM_0MVrWmDPSjfT0OTe115s2yyl03x8lBDDcql1qovyuuEBVJxhRK37E8yDlyIZrzXz6CwXBkW5T-4V3IGCKFf29THvXdJlpML6wLENkNqvCd4JZw_4L-0IYXH6PeWpE7Z8Zi3yxDrBAYVfA7oTczznz4gdq13TlehuOv53LijKqcWLa5vzT0qTmxbgm2MroYiJCyI4fyYdrwlrEN"/>
+</div>
+<div class="w-full md:w-1/2 space-y-6">
+<h3 class="font-headline-xl text-headline-xl uppercase italic">ELIXIR TROPICAL <br/><span class="text-neon-green">MANSÃO MAROMBA</span></h3>
+<p class="text-on-surface-variant font-body-lg">A energia brutal da Mansão agora em versão tropical. Zero açúcar, máxima intensidade e um kick de cafeína premium para o seu treino ou rolê.</p>
+<div class="flex flex-col gap-2">
+<span class="text-label-caps text-on-surface-variant opacity-60">VALOR UNITÁRIO</span>
+<span class="font-price-display text-price-display text-neon-yellow">R$ 24,90</span>
+</div>
+<button class="w-full md:w-auto bg-neon-yellow text-jet-black font-black py-4 px-12 text-label-caps hover:scale-[1.02] active:scale-95 transition-transform flex items-center justify-center gap-3">
+<span class="material-symbols-outlined">add_shopping_cart</span>
+                                ADICIONAR AO CARRINHO
+                            </button>
+</div>
+</div>
+</div>
+<!-- Side Card 1 -->
+<div class="md:col-span-4 bg-dark-grey p-8 border border-white/5 flex flex-col justify-between group product-card relative overflow-hidden">
+<div class="absolute inset-0 glow-overlay bg-gradient-to-br from-neon-yellow/5 to-transparent pointer-events-none"></div>
+<div class="relative z-10">
+<div class="flex justify-between items-start mb-8">
+<div>
+<h4 class="font-headline-md text-headline-md uppercase italic leading-tight">HARD CORE <br/>SODA</h4>
+<p class="text-label-caps text-on-surface-variant mt-2">LINHA PREMIUM</p>
+</div>
+<span class="text-neon-yellow material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">bolt</span>
+</div>
+<div class="product-img mb-8">
+<img alt="Premium Yellow Bottle" class="w-full h-64 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCE6x6F7Ge4XzQtE4FaMoQG4eyvY9UBf3_LgoE_98aKg3T0fdPze-CUofsuW6N0_9-rnoim2wPHlchikRc0vyPAEToTxAuAwDLscGcClJFjMyisZpnkIvTFam0KYsmf8RHXOf97xq0tYnVYXFLorvJE-FCwrX9DaK1rKcTiGYVTdIY5aOql0_PC2NRiJs30lG72GYhXKQOPqcRJj3UHNKFQm6nT-Iq6YsyBwgBg5xtjbUAcMHMbiLsGvDlb0XgKjgGpSpDVy4kRUZd2"/>
+</div>
+</div>
+<div class="flex items-center justify-between mt-auto">
+<span class="font-price-display text-headline-md text-primary">R$ 89,90</span>
+<button class="bg-white/5 border border-white/10 p-4 hover:bg-neon-yellow hover:text-jet-black transition-all">
+<span class="material-symbols-outlined">shopping_bag</span>
+</button>
+</div>
+</div>
+<!-- Sub Grid Row -->
+<!-- Card 2 -->
+<div class="md:col-span-3 bg-dark-grey p-6 border border-white/5 group product-card">
+<div class="relative aspect-[3/4] mb-4 bg-jet-black flex items-center justify-center overflow-hidden">
+<img alt="Product" class="w-3/4 h-auto product-img transition-transform grayscale hover:grayscale-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBzzmudjN95usfQQGvkPRpeXv_0zZtuy0YprVwTKydWcqnJK9XNG_TL_KfyorbtM_0MVrWmDPSjfT0OTe115s2yyl03x8lBDDcql1qovyuuEBVJxhRK37E8yDlyIZrzXz6CwXBkW5T-4V3IGCKFf29THvXdJlpML6wLENkNqvCd4JZw_4L-0IYXH6PeWpE7Z8Zi3yxDrBAYVfA7oTczznz4gdq13TlehuOv53LijKqcWLa5vzT0qTmxbgm2MroYiJCyI4fyYdrwlrEN"/>
+<div class="absolute bottom-4 right-4 bg-jet-black/80 backdrop-blur-md px-3 py-1 rounded text-label-caps text-neon-green border border-neon-green/30">FRETE GRÁTIS</div>
+</div>
+<h5 class="text-label-caps font-bold mb-2">SPRITZ MAROMBA VOL. 1</h5>
+<div class="flex justify-between items-center">
+<p class="text-headline-md font-black text-neon-yellow">R$ 34,00</p>
+<button class="text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined">add_circle</span>
+</button>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="md:col-span-3 bg-dark-grey p-6 border border-white/5 group product-card">
+<div class="relative aspect-[3/4] mb-4 bg-jet-black flex items-center justify-center overflow-hidden">
+<img alt="Product" class="w-3/4 h-auto product-img transition-transform grayscale hover:grayscale-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCE6x6F7Ge4XzQtE4FaMoQG4eyvY9UBf3_LgoE_98aKg3T0fdPze-CUofsuW6N0_9-rnoim2wPHlchikRc0vyPAEToTxAuAwDLscGcClJFjMyisZpnkIvTFam0KYsmf8RHXOf97xq0tYnVYXFLorvJE-FCwrX9DaK1rKcTiGYVTdIY5aOql0_PC2NRiJs30lG72GYhXKQOPqcRJj3UHNKFQm6nT-Iq6YsyBwgBg5xtjbUAcMHMbiLsGvDlb0XgKjgGpSpDVy4kRUZd2"/>
+</div>
+<h5 class="text-label-caps font-bold mb-2">BITTER PUNCH PREMIUM</h5>
+<div class="flex justify-between items-center">
+<p class="text-headline-md font-black text-neon-yellow">R$ 112,00</p>
+<button class="text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined">add_circle</span>
+</button>
+</div>
+</div>
+<!-- Card 4 (Double Height or Offset) -->
+<div class="md:col-span-6 bg-neon-yellow text-jet-black p-10 flex flex-col justify-center items-start gap-6 border border-white/5 overflow-hidden group">
+<div class="space-y-2">
+<h3 class="font-display-lg text-headline-xl uppercase leading-none font-black italic">COMBO <br/>BRUTALIDADE</h3>
+<p class="font-label-caps text-label-caps bg-jet-black text-white px-2 py-1 inline-block">15% OFF EM TODO O PACK</p>
+</div>
+<p class="text-body-lg font-bold max-w-sm">Garanta a coleção completa com desconto exclusivo. 12 garrafas sortidas + Shaker exclusivo Mansão Maromba.</p>
+<a class="border-2 border-jet-black px-8 py-3 font-label-caps text-label-caps hover:bg-jet-black hover:text-neon-yellow transition-all flex items-center gap-2 group-hover:translate-x-2" href="product.html">
+                        VER DETALHES DO PACK
+                        <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+</div>
+</section>
+<!-- Quality Metrics Section -->
+<section class="py-section-gap px-margin-desktop bg-jet-black border-y border-white/5">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-gutter text-center">
+<div class="space-y-4 p-8 border-r border-white/5 group">
+<span class="material-symbols-outlined text-[48px] text-neon-green group-hover:scale-110 transition-transform inline-block">science</span>
+<h6 class="font-label-caps text-label-caps text-primary">FÓRMULA LAB</h6>
+<p class="text-on-surface-variant text-sm opacity-60">Pureza extrema garantida.</p>
+</div>
+<div class="space-y-4 p-8 border-r border-white/5 group">
+<span class="material-symbols-outlined text-[48px] text-neon-green group-hover:scale-110 transition-transform inline-block">local_shipping</span>
+<h6 class="font-label-caps text-label-caps text-primary">ENVIO RÁPIDO</h6>
+<p class="text-on-surface-variant text-sm opacity-60">Brasil todo em até 48h.</p>
+</div>
+<div class="space-y-4 p-8 border-r border-white/5 group">
+<span class="material-symbols-outlined text-[48px] text-neon-green group-hover:scale-110 transition-transform inline-block">lock</span>
+<h6 class="font-label-caps text-label-caps text-primary">SAFE PAY</h6>
+<p class="text-on-surface-variant text-sm opacity-60">Criptografia de ponta.</p>
+</div>
+<div class="space-y-4 p-8 group">
+<span class="material-symbols-outlined text-[48px] text-neon-green group-hover:scale-110 transition-transform inline-block">verified</span>
+<h6 class="font-label-caps text-label-caps text-primary">SUPORTE VIP</h6>
+<p class="text-on-surface-variant text-sm opacity-60">24/7 via WhatsApp.</p>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-jet-black full-width mt-section-gap border-t border-surface-container-high grid grid-cols-1 md:grid-cols-12 gap-gutter px-margin-desktop py-16">
+<div class="md:col-span-5 space-y-8">
+<div class="text-display-lg font-display-lg text-surface-container-highest opacity-20 uppercase leading-none select-none">GHIA</div>
+<p class="text-body-md text-on-surface-variant max-w-sm">Nascido nas ruas, forjado no ferro. A Mansão Maromba é mais que uma marca, é um estilo de vida sem arrependimentos.</p>
+<div class="flex gap-4">
+<a class="w-12 h-12 flex items-center justify-center border border-white/10 hover:border-neon-green hover:text-neon-green transition-all rounded-full" href="product.html">
+<span class="material-symbols-outlined text-[20px]">public</span>
+</a>
+<a class="w-12 h-12 flex items-center justify-center border border-white/10 hover:border-neon-green hover:text-neon-green transition-all rounded-full" href="product.html">
+<span class="material-symbols-outlined text-[20px]">alternate_email</span>
+</a>
+</div>
+</div>
+<div class="md:col-span-2 space-y-6">
+<h5 class="text-label-caps font-bold text-neon-green">ABOUT</h5>
+<ul class="space-y-3">
+<li><a class="text-on-surface-variant hover:text-neon-green transition-transform duration-200 hover:translate-x-1 inline-block" href="product.html">Our Story</a></li>
+<li><a class="text-on-surface-variant hover:text-neon-green transition-transform duration-200 hover:translate-x-1 inline-block" href="product.html">Find Us</a></li>
+<li><a class="text-on-surface-variant hover:text-neon-green transition-transform duration-200 hover:translate-x-1 inline-block" href="product.html">Careers</a></li>
+</ul>
+</div>
+<div class="md:col-span-2 space-y-6">
+<h5 class="text-label-caps font-bold text-neon-green">SHOP</h5>
+<ul class="space-y-3">
+<li><a class="text-on-surface-variant hover:text-neon-green transition-transform duration-200 hover:translate-x-1 inline-block" href="product.html">Bestseller</a></li>
+<li><a class="text-on-surface-variant hover:text-neon-green transition-transform duration-200 hover:translate-x-1 inline-block" href="product.html">Le Spritz</a></li>
+<li><a class="text-on-surface-variant hover:text-neon-green transition-transform duration-200 hover:translate-x-1 inline-block" href="product.html">The Apéritif</a></li>
+<li><a class="text-on-surface-variant hover:text-neon-green transition-transform duration-200 hover:translate-x-1 inline-block" href="product.html">Bundles</a></li>
+</ul>
+</div>
+<div class="md:col-span-3 space-y-6">
+<h5 class="text-label-caps font-bold text-neon-green">JOIN THE GHIA CIRCLE</h5>
+<p class="text-body-md text-on-surface-variant">Be The First To Sip Something New. Thoughtful Updates. No Clutter.</p>
+<div class="flex border-b border-white/20 pb-2 group focus-within:border-neon-yellow transition-all">
+<input class="bg-transparent border-none focus:ring-0 text-primary w-full placeholder:text-on-surface-variant/30" placeholder="Email" type="email"/>
+<button class="text-on-surface-variant hover:text-neon-yellow transition-colors">
+<span class="material-symbols-outlined">north_east</span>
+</button>
+</div>
+<div class="pt-8 opacity-40 text-label-caps text-[10px]">
+                © 2024 MANSÃO MAROMBA. NO REGRETS.
+            </div>
+</div>
+</footer>
+<!-- Bottom Nav Mobile -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 py-3 bg-jet-black/80 backdrop-blur-2xl md:hidden border-t border-outline-variant">
+<a class="flex flex-col items-center justify-center text-neon-yellow bg-surface-container-highest/50 rounded-xl p-2" href="product.html">
+<span class="material-symbols-outlined">bolt</span>
+<span class="text-label-caps mt-1">Shop</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant p-2 active:bg-surface-variant transition-colors" href="product.html">
+<span class="material-symbols-outlined">shield_with_heart</span>
+<span class="text-label-caps mt-1">Damage</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant p-2 active:bg-surface-variant transition-colors" href="product.html">
+<span class="material-symbols-outlined">groups</span>
+<span class="text-label-caps mt-1">Community</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant p-2 active:bg-surface-variant transition-colors" href="product.html">
+<span class="material-symbols-outlined">shopping_bag</span>
+<span class="text-label-caps mt-1">Cart</span>
+</a>
+</nav>
+<script>
+        // Micro-interactions and hover effects
+        document.querySelectorAll('.product-card').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                const icon = card.querySelector('.material-symbols-outlined');
+                if (icon) {
+                    icon.style.fontVariationSettings = "'FILL' 1";
+                }
+            });
+            card.addEventListener('mouseleave', () => {
+                const icon = card.querySelector('.material-symbols-outlined');
+                if (icon) {
+                    icon.style.fontVariationSettings = "'FILL' 0";
+                }
+            });
+        });
+
+        // Simple paralax-ish effect on scroll
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const heroText = document.querySelector('h1');
+            if (heroText) {
+                heroText.style.transform = `translateY(${scrolled * 0.15}px)`;
+            }
+        });
+    </script>
+</body></html>
