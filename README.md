@@ -1,6 +1,6 @@
 # Mansao Maromba
 
-Mansao Maromba e uma pagina web criada como atividade pratica durante a minha jornada no curso do SENAI: **Desenvolvimento de aplicacoes de IA generativa utilizando Google Antigravity**.
+Mansao Maromba é uma pagina web criada como atividade pratica durante a minha jornada no curso do SENAI: **Desenvolvimento de aplicacoes de IA generativa utilizando Google Antigravity**.
 
 O objetivo da atividade foi gerar um layout/tema usando o **Google Stitch**, importar esse material para o **Google Antigravity** e, a partir disso, gerar uma pagina web.
 
